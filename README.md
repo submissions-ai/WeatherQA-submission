@@ -1,6 +1,5 @@
 # WeatherQA Dataset Description
-WeatherQA is the first multimodal dataset designed for machines to reason about complex combinations of weather parameters and predict severe weather in real-world scenarios.\
-Link to the paper: [WeatherQA: Can Multimodal Language Models Reason about Severe Weather?](https://arxiv.org/abs/2406.11217)
+WeatherQA is the first multimodal severe weather dataset curated for machines to reason about complex combinations of weather parameters and predict severe weather in real-world scenarios.
 
 Each entry of WeatherQA includes:
 - A set of 20 images from the [Mesoscale Analysis Archive](https://www.spc.noaa.gov/exper/ma_archive/)
@@ -8,7 +7,6 @@ Each entry of WeatherQA includes:
 - The data is licensed under the copyright of [NOAA](https://www.noaa.gov/)
 
 ![WeatherQA Dataset](./figure/WeatherQA_dataset.jpg)
-
 
 
 ## WeatherQA Dataset
@@ -177,7 +175,8 @@ The script uses the WeatherQA dataset to test the models' ability to predict the
 
 ### Benchmark Results
 
-**Task 1: Accuracy of Areas Affected Multi-choice Question**
+
+**Accuracy of Areas Affected Multi-choice QA**
 
 | Model | 0-shot | 1-shot | 3-shot | 0-shot-CoT | 3-shot-CoT |
 |-------|--------|--------|--------|------------|------------|
@@ -187,29 +186,35 @@ The script uses the WeatherQA dataset to test the models' ability to predict the
 | GPT-4o | 36.83% | **35.67%** | 38.83% | 38.17% | **39.33%** |
 | Gemini Flash 1.5 | 30.67% | 33.00% | 34.33% | 31.17% | 30.67% |
 | Gemini Pro 1.5 | 31.50% | **35.67%** | **39.00%** | 33.56% | 33.06% |
+| Phi 3.5 Vision Instruct | 20.00% | / | / | 19.67% | / |
+| Qwen2 VL 7B | 21.33% | / | / | 22.67% | / |
+| InternVL 2 8B | 23.50% | / | / | 24.17% | / |
+| InternVL 2 26B | 23.33% | / | / | 23.67% | / |
+| InternVL 2 40B | 25.33% | / | / | 25.17% | / |
 | Fine-tuned-VLM (Llama3 8B) | 28.17% | / | / | / | / |
 
-##
-
-**Task 2: Accuracy / Weighted F1 Score of Concerning Classification**
+**Percentage of Correct Area Affected Multi-choice and Correct "Concerning" classification**
 
 | Model | 0-shot | 1-shot | 3-shot | 0-shot-CoT | 3-shot-CoT |
 |-------|--------|--------|--------|------------|------------|
-| Claude 3 Opus | 3.50% / 0.01 | / | / | 3.33% / 0.01 | / |
-| Claude 3.5 Sonnet | 13.50% / 0.1 | / | / | **18.00%** / **0.1** | / |
-| GPT4-Turbo | 3.67% / 0.04 | 12.50% / 0.09 | 5.50% / 0.06 | 3.00% / 0.01 | 5.33% / 0.04 |
-| GPT4-o | 8.17% / 0.03 | 22.33% / **0.21** | **28.83%** / **0.31** | 8.00% / 0.05 | 8.33% / 0.05 |
-| Gemini Flash 1.5 | 7.17% / 0.02 | 17.67% / 0.19 | 13.00% / 0.14 | 3.33% / 0.01 | 5.83% / 0.04 |
-| Gemini Pro 1.5 | 4.67% / 0.02 | **25.33%** / **0.21** | 24.17% / 0.21 | 2.67% / 0.01 | **18.70%** / **0.17** |
-| Fine-tuned-VLM (Llama3 8B) | **45.00%** / **0.42** | / | / | / | / |
-
-##
+| Claude 3 Opus | 1.33% | / | / | 0.67% | / |
+| Claude 3.5 Sonnet | 6.0% | / | / | **8.67%** | / |
+| GPT-4 Turbo | 1.83% | 4.5% | 1.0% | 0.83% | 2.0% |
+| GPT-4o | 5.67% | 7.83% | **11.33%** | 5.33% | 4.83% |
+| Gemini Flash 1.5 | 3.17% | 7.17% | 7.17% | 1.17% | 2.17% |
+| Gemini Pro 1.5 | 2.0% | **9.83%** | 10.5% | 1.5% | **8.18%** |
+| Phi 3.5 Vision Instruct | 1.33% | / | / | 1.00% | / |
+| Qwen2 VL 7B | 2.5% | / | / | 3.0% | / |
+| InternVL2-40B | 2.17% | / | / | 3.0% | / |
+| InternVL2-26B | 1.83% | / | / | 1.17% | / |
+| InternVL2-8B | 3.0% | / | / | 3.0% | / |
+| Fine-tuned-VLM (Llama3 8B) | **13.33%** | / | / | / | / |
 
 ### Setup
 
 1. **Clone the repository** (if applicable):
     ```bash
-    git clone https://github.com/chengqianma/WeatherQA.git
+    git clone ``current repo``
     cd WeatherQA
     ```
 
