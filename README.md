@@ -243,7 +243,7 @@ The script is configured using several variables:
 - `MODEL_ID`: The specific model ID to use.
   - `GPT`: `gpt-4o-2024-05-13`; `gpt-4-turbo-2024-04-09`
   - `Gemini`: `gemini-1.5-flash-latest`; `gemini-1.5-pro-latest`
-  - `Claude`: `claude-3-opus-20240229`
+  - `Claude`: `claude-3-opus-20240229`; `claude-3-5-sonnet-20240620`
 - `API_KEY`: Your API key for accessing the model.
 - `PROMPT_PATH`: Path to the input JSON file containing the prompts.
 - `RESULT_PATH`: Path to the output JSON file where results will be saved.
